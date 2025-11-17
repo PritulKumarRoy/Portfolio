@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script>
+    angular.module('portfolioApp', [])
+      .controller('PortfolioController', ['$scope', '$window', function($scope, $window) {
+        $scope.showNav = true; // initially visible
+
+        $scope.scrollTo = function(sectionId) {
+          var element = document.getElementById(sectionId);
+          if(element) {
+            element.scrollIntoView({behavior: 'smooth'});
+          }
+        };
+
+        // Hide top-nav when scrolling past Home
+        angular.element($window).bind("scroll", function() {
+          var homeHeight = document.getElementById('home').offsetHeight;
+          $scope.showNav = $window.pageYOffset < homeHeight;
+          $scope.$apply();
+        });
+      }]);
+  </script>
+</head>
+
+<body ng-controller="PortfolioController">
+
+  <!-- TOP NAVIGATION (Visible only on Home page) -->
+  <section id="home">
+    <div class="top-nav" ng-show="showNav">
+  <button ng-click="scrollTo('home')">
+    <img src="Images/home.png" alt="Home"> Home
+  </button>
+  <button ng-click="scrollTo('page2')">
+    <img src="Images/about.png" alt="About me"> About me
+  </button>
+  <button ng-click="scrollTo('page3')">
+    <img src="Images/works.png" alt="My works"> My works
+  </button>
+  <button ng-click="scrollTo('contact')">
+    <img src="Images/contacts.png" alt="Contact me"> Contact me
+  </button>
+</div>
+
+    <div class="home-quote">
+      "I am a person with a passion for exploring the creative world. Arts, crafts and innovation ideas fuel my curiosity.
+      I love turning creative imaginations into tangible creations and discovering new possibilities."
+    </div>
+
+    <div class="home-nameS">
+      PRITUL KUMAR ROY
+    </div>
+
+    <div class="home-nameS1">
+      Hello I'm,
+    </div>
+
+    <div class="home-nameS2">
+       <a href="https://www.linkedin.com/in/pritul-kumar-roy-84a50a328/?originalSubdomain=in" target="_blank">
+       <img src="Images/l.png"></a>
+    </div>
+
+    <!-- Right side video (bg1b.mp4 logic removed) -->
+    <div class="home-right"></div>
+
+    <!-- Top video (bg1a.mp4 logic removed) -->
+    <div class="home-top-video"></div>
+
+    <!-- Middle image -->
+    <div class="home-middle-image-wrapper">
+  <img src="Images/Student.png" class="home-middle-image" />
+</div>
+
+    <!-- White (front layer) -->
+<div class="home-portfolio-text layer1">
+  <span class="part1">Port</span>
+  <span class="part2"><em>folio</em></span>
+</div>
+
+    <!-- Yellow / Hot Orange (bottom layer) -->
+<div class="home-portfolio-text layer3">
+  <span class="part1">Port</span>
+  <span class="part2"><em>folio</em></span>
+</div>
+
+<!-- Amber (middle layer) -->
+<div class="home-portfolio-text layer2">
+  <span class="part1">Port</span>
+  <span class="part2"><em>folio</em></span>
+</div>
+
+<div class="home-portfolio-text layer4">
+  <span class="part1">Port</span>
+  <span class="part2"><em>folio</em></span>
+</div>
+
+    <div class="semi-black"></div>
+    <div class="semi-amber"></div>
+    <div class="semi-orange"></div>
+    <div class="semi-white"></div>
+  <div class="glass-window">
+  </div>
+  <div class="tiny-square"></div>
+  <div class="objecta"></div> 
+
+  <div class="home-namea">
+      Passionate
+    </div>
+
+    <div class="home-nameb">
+      Risk-taking 
+    </div>
+
+    <div class="home-namec">
+      Technical
+    </div>
+
+    <div class="home-named">
+      Focused
+    </div>
+
+    <div class="home-namee">
+      Logical thinker
+    </div>
+
+    <div class="home-namef">
+    <svg viewBox="0 0 300 150" width="200">
+        <defs>
+            <!-- Increased curvature by lifting midpoint higher -->
+            <path id="curveF"
+                  d="M 20 110 
+                     Q 150 -40 280 110" />
+        </defs>
+
+        <text font-size="18.8" font-family="Lora" fill="#ffffff">
+            <textPath xlink:href="#curveF" startOffset="50%" text-anchor="middle">
+                Organized
+            </textPath>
+        </text>
+    </svg>
+</div>
+
+  </section>
+
+<!-- PAGE 2 / ABOUT SECTION -->
+<section id="page2">
+
+  <!-- Full-width overlay -->
+  <div class="about-overlay">
+    <h2>ABOUT <span>ME</span></h2>
+    <p class="about-paragraph">
+      	My name is Pritul kumar roy. I am 22 years old and currently completed my B.Tech journey on the field of 'Electronics and communication' engineering from 'Dr. B.C. Roy Engineering College', Durgapur. I found myself to be driven towards innovative creations that fosters creativity and development which together helps in shaping a brighter future. My enthusiasim drags my belive towards continious learning, exploring new technologies and pushing boundaries that inspire. I am passionate towards designing logical circuits, archietectural blueprints and mitigation of software conflicts. 
+    </p>
+
+    <!-- Skills Section -->
+    <div class="skills">
+      <h3>Skills</h3>
+      <div class="skill-list">
+        <span class="skill"><b> HTML </b></span>
+        <span class="skill"><b> CSS </b></span>
+        <span class="skill"><b> Angular </b></span>
+        <span class="skill"><b> Frontend development </b></span>
+        <span class="skill"><b> UI/UX Design </b></span>
+        <span class="skill"><b> Backend development </b></span>
+        <span class="skill"><b> Web development </b></span>
+        <span class="skill"><b> Android application development </b></span>
+        <span class="skill"><b> Graphic design </b></span>
+        <span class="skill"><b> Database management </b></span>
+        <span class="skill"><b> MATLAB </b></span>
+        <span class="skill"><b> VLSI design </b></span>
+        <span class="skill"><b> SoC design </b></span>
+        <span class="skill"><b> Excel </b></span>
+        <span class="skill"><b> MS word </b></span>
+        <span class="skill"><b> MS power point </b></span>
+      </div>
+    </div>
+  </div>
+
+   <div class="window-frame">
+    <video autoplay muted loop playsinline class="window-video">
+      <source src="Videos/bg3.mp4" type="video/mp4" />
+    </video>
+    <div class="window-grills">  
+       <!-- Horizontal grills -->
+      <span class="h1"></span>
+      <span class="h2"></span>
+      <!-- Vertical grills -->
+      <span class="v1"></span>
+      <span class="v2"></span>
+      </div>
+  </div>
+     
+      <div class="window-arch"></div>
+      <div class="decor-image"></div>
+      <div class="decor-image-2"></div>
+      <div class="decor-image-3"></div>
+      <div class="glass-windows">
+      </div>
+
+      <div class="rectangle one"></div>
+      <div class="rectangle two"></div>
+      <div class="rectangle three"></div>
+       
+      <div class="vertical-rod"></div>
+      <img src="Images/ed.png" alt="Centered Image" class="center-image">
+      <div class="education-box">
+    <h3>Education</h3>
+</div>
+
+      <div class="language-box">
+    <h4>Languages</h4>
+
+      <ul class="language-list">
+        <li>English</li>
+        <li>Bengali</li>
+        <li>Hindi</li>
+    </ul>
+</div>
+
+</section>
+
+<!-- ===== PAGE 3 : MY WORKS ===== -->
+<section id="page3">
+  <div class="about-overlay">
+    <div class="heading-wrapper">
+      <h2><class="my">MY <span class="works">WORKS</span></h2>
+      <h3>Project 1 – Mobile Application <span>“Geo”</span></h3>
+    </div>
+  </div>
+
+  <div class="left-box-container">
+    <div class="inner-box box1">
+
+        <div class="box1-content">
+            <h4>Technology Stack</h4>
+
+            <div class="tech-list two-col">
+
+                <div class="tech-item"><img src="Images/l1.png" alt="Flutter"><span>Flutter</span></div>                
+                <div class="tech-item"><img src="Images/l2.png" alt="Firebase"><span>Firebase</span></div>
+                <div class="tech-item"><img src="Images/l3.png" alt="OpenStreetMap (OSM)"><span>OpenStreetMap (OSM)</span></div>
+                <div class="tech-item"><img src="Images/l4.png" alt="Java Development Kit"><span>Java Development Kit</span></div>
+                <div class="tech-item"><img src="Images/l5.png" alt="Gradle"><span>Gradle</span></div>
+                <div class="tech-item"><img src="Images/l6.png" alt="Android studio"><span>Android studio</span></div>
+                <div class="tech-item"><img src="Images/l7.png" alt="Visual studio"><span>Visual studio</span></div>
+                <div class="tech-item"><img src="Images/l8.png" alt="Notepad"><span>Notepad</span></div>
+                <div class="tech-item"><img src="Images/l9.png" alt="Map tiler"><span>Map tiler</span></div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="app-logo-container">
+    <div class="inner-box app-logo-box">
+
+        <div class="app-logo-content">
+            <h4>App Logo</h4>
+
+            <div class="logo-wrapper">
+                <img src="Images/al.jpg" alt="App Logo">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="left-box-container functions-container">
+    <div class="inner-box box2">
+
+        <div class="box2-content">
+            <h4>Key Functions</h4>
+
+            <ul class="function-list">
+                <li><b>Robust virtual geofencing</b></li>
+                <li><b>Real-time location tracking</b></li>
+                <li><b>Map navigation and capture coordinates</b></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+          <div id="project2-title-box">
+    Project 2 – Research Paper Publications
+</div>
+
+         <div id="right-paper-container">
+
+    <div class="paper-card">
+        <div class="paper-logo">
+                 <img src="Images/lb.png" alt="Paper 1 Logo">
+        </div>
+        <div class="paper-text">
+            <h5>Paper 1</h5>
+            <h6>Studies on Navigational Satellite Visibility and Signal Strength of Different GNSS Sensor</h6>
+            <p class="publisher">Publisher - IEEE</p>
+        </div>
+    </div>
+
+    <div class="paper-card">
+        <div class="paper-logo">
+                   <img src="Images/la.png" alt="Paper 2 Logo">
+        </div>
+        <div class="paper-text">
+            <h5>Paper 2</h5>
+            <h6>Indoor-Outdoor GNSS Performance Across Various Android Smartphones</h6>
+            <p class="publisher">Publisher - IEEE</p>
+        </div>
+    </div>
+
+</div>
+
+<div id="mini-container-wrapper">
+
+     <a href="https://ieeexplore.ieee.org/author/274370817063666" target="_blank">
+    <div class="mini-card">
+        <img src="Images/bgs.png" alt="">
+        <h6>Paper 1 & Paper 2</h6>
+    </div></a>
+
+     <a href="https://www.semanticscholar.org/paper/Studies-on-Navigational-Satellite-Visibility-and-of-Dutta-Mahato/16724baa81ede1a8dc89d1253389628d8349ab81" target="_blank">
+    <div class="mini-card">
+        <img src="Images/bgsa.png" alt="">
+        <h6>Paper 1</h6>
+    </div></a>
+
+     <a href="https://www.semanticscholar.org/paper/Indoor-Outdoor-GNSS-Performance-Across-Various-Dutta-Mahato/642c2c36c3b57188a70870498fb6a830b451c8d9" target="_blank">
+    <div class="mini-card">
+        <img src="Images/bgsa.png" alt="">
+        <h6>Paper 2</h6>
+    </div></a>
+
+     <a href="https://scholar.google.com/scholar?q=Studies%20on%20Navigational%20Satellite%20Visibility%20and%20Signal%20Strength%20of%20Different%20GNSS%20Sensor" target="_blank">
+    <div class="mini-card">
+        <img src="Images/bgsb.png" alt="">
+        <h6>Paper 1</h6>
+    </div></a>
+
+     <a href="https://scholar.google.com/scholar?q=Indoor-Outdoor%20GNSS%20Performance%20Across%20Various%20Android%20Smartphones" target="_blank">
+    <div class="mini-card">
+        <img src="Images/bgsb.png" alt="">
+        <h6>Paper 2</h6>
+    </div></a>
+</div>
+
+    <h7 id="paper-links-title">PAPER WORK LINKS</h7>
+
+</section>
+
+<!-- CONTACT PAGE SECTION -->
+<section id="contact" class="content">
+  <h2 id="contact-heading">
+    <span class="contact">CONTACT</span>
+    <span class="me">ME</span>
+  </h2>
+
+     <!-- RIGHT SIDE CONTACT INFO -->
+  <div id="contact-info-box">
+    <div class="info-item">
+      <img src="Images/ca.png" alt="Phone">
+      <p>+91 8942855973</p>
+    </div>
+
+    <div class="info-item">
+      <img src="Images/cb.png" alt="Email">
+      <p>kumarroypritul@gmail.com</p>
+    </div>
+
+    <div class="info-item">
+      <img src="Images/cc.png" alt="Location">
+      <p>Durgapur, West bengal, India</p>
+    </div>
+  </div>
+
+   <div class="right-photo-box">
+    <img src="Images/cp.png" alt="Photo">
+</div>
+
+</section>
+
+
+</body>
+</html>

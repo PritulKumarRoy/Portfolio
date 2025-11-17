@@ -1,0 +1,1387 @@
+/* ------------------------------------------------------------ */
+/* IMPORT GOOGLE FONTS                                          */
+/* ------------------------------------------------------------ */
+
+/* Original Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,700&display=swap');
+
+/* Added 10 more stylish fonts (italic + bold variations) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,700;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* ------------------------------------------------------------ */
+/* GLOBAL STYLES                                                */
+/* ------------------------------------------------------------ */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #FF9500; 
+  color: #fff;
+  overflow-x: hidden !important;
+}
+
+/* ------------------------------------------------------------ */
+/* HOME SECTION                                                 */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* HOME SECTION with dynamic repeat/duplicate background         */
+/* ------------------------------------------------------------ */
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #FF9500; /* Keep main background if needed */
+}
+
+/* ------------------------------------------------------------ */
+/* GLASS WINDOW: fixed layout, unaffected by internal elements   */
+/* ------------------------------------------------------------ */
+#home .glass-window {
+  position: absolute;
+  top: 56.5%;
+  left: -2.7%;
+  transform: translateY(-50%);
+  width: 71%;
+  height: 90%;
+  padding: 2rem;
+  border-radius: 8px;
+  overflow: hidden; /* keeps capsules inside */
+  box-shadow: none;
+
+  /* Glass aesthetic */
+  background: #FF9500;
+
+  /* Layout isolation */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  isolation: isolate; /* separates stacking context */
+}
+
+#home .objecta {
+  width: 900px;
+  height: 700px;
+  background-image: url('Images/bgo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  left: 0px;
+  bottom: -170px;
+  z-index: 70;
+  transform-origin: center; /* Rotate around bottom-left corner */
+  transform: rotate(-30deg); /* Rotate clockwise */
+  transform-origin: center; /* Rotate around bottom-left corner */
+}
+
+/* ------------------------------------------------------------ */
+/* LEFT SIDE (Simplified — text over image, no hover/shadow)     */
+/* ------------------------------------------------------------ */
+
+/* Quote below the name */
+.home-quote {
+  position: absolute;
+  bottom: 28px;
+  left: 382px;
+  font-family: 'Lora', sans serif;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: right;
+}
+
+.home-namea {
+  position: absolute;
+  right: 40.4%;
+  top: 44%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+  transform: rotate(-90deg);
+    transform-origin: center;   /* adjust pivot point if needed */
+    display: inline-block;        /* required for rotation */
+}
+
+.home-nameb {
+  position: absolute;
+  right: 20.1%;
+  top: 20%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+  transform: rotate(-90deg);
+    transform-origin: center;   /* adjust pivot point if needed */
+    display: inline-block;        /* required for rotation */
+}
+
+.home-namec {
+  position: absolute;
+  right: 1.8%;
+  top: 44.5%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+  transform: rotate(-90deg);
+    transform-origin: center;   /* adjust pivot point if needed */
+    display: inline-block;        /* required for rotation */
+}
+
+.home-named {
+  position: absolute;
+  right: 42.9%;
+  top: 87%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+  transform: rotate(-78deg);
+    transform-origin: center;   /* adjust pivot point if needed */
+    display: inline-block;        /* required for rotation */
+}
+
+.home-namee {
+  position: absolute;
+  right: 24.8%;
+  top: 60.9%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  font-style: bold;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+  transform: rotate(-75.9deg);
+    transform-origin: center;   /* adjust pivot point if needed */
+    display: inline-block;        /* required for rotation */
+}
+
+.home-namef {
+  position: absolute;
+  right: 2%;
+  top: 49.8%;
+  font-family: 'Lora', sans serif;
+  font-size: 0.8rem;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 50;
+  max-width: 300px;
+  line-height: 1.0;
+  opacity: 0.95;
+  text-align: left;
+
+  display: inline-block;
+}
+
+/* Ensure SVG scales cleanly */
+.home-namef svg {
+  overflow: visible;
+}
+
+.home-nameS {
+  position: absolute;
+  bottom: 0px;
+  left: 35px;
+  font-family: 'Nunito', sans serif;
+  font-size: 6rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  z-index: 82;
+  max-width: 350px;
+  line-height: 1.3;
+  opacity: 0.95;
+  text-align: left;
+}
+
+.home-nameS1 {
+  position: absolute;
+  bottom: 53%;
+  left: 40px;
+  font-family: 'Quicksand', sans serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 1px;
+  z-index: 83;
+  max-width: 300px;
+  line-height: 1.3;
+  opacity: 0.95;
+  text-align: left;
+}
+
+.home-nameS2 {
+  position: absolute;
+  bottom: 150px;             
+  left: 43.3%;                
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  z-index: 99999999;   /* SUPER IMPORTANT */
+}
+
+.home-nameS2 img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Top-left element removed (no video or Creative Space) */
+.home-top-video {
+  display: none;
+}
+
+/* Wrapper — controls position, size & responsiveness */
+.home-middle-image-wrapper {
+  position: absolute;
+  left: 150px;
+  top: 45%;
+  transform: translateY(-50%);
+
+  width: 450px;      /* your container width */
+  height: 500px;     /* your container height */
+
+  border-radius: 16px;
+  overflow: hidden;  /* IMPORTANT: keeps image inside container */
+
+  z-index: 20;
+}
+
+/* Image — auto-adjust ANY size perfectly */
+.home-middle-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* best for portraits, fills container */
+  object-position: center; /* keep focus centered */
+  display: block;
+}
+
+/* ------------------------------------------------------------ */
+/* RIGHT SIDE AREA (Kept same)                                  */
+/* ------------------------------------------------------------ */
+.home-right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background: none;
+}
+
+/* Common text base */
+.home-portfolio-text {
+  position: absolute;
+  right: 5.5%;
+  top: 10%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+/* Layer 1 – Retro blue (Front) */
+.home-portfolio-text.layer1 span {
+  color: #069494;
+  z-index: 30;
+  position: relative;
+}
+
+/* Layer 2 – Amber (Middle) */
+.home-portfolio-text.layer2 {
+  color: #FF6F00; /* Amber */
+  z-index: 29;
+  transform: translate(8px, 8px);
+}
+
+/* Layer 3 – Hot Orange (Back) */
+.home-portfolio-text.layer3 {
+  color: #CC5500; /* Hot Orange */
+  z-index: 28;
+  transform: translate(16px, 16px);
+}
+
+/* Layer 4 – White (Front) */
+.home-portfolio-text.layer4 span {
+  color: #000;
+  z-index: 27;
+  transform: translate(24px, 24px);
+}
+
+/* Ensure both parts look identical */
+.home-portfolio-text span {
+  text-align: right;
+}
+
+/* ------------------------------------------------------------ */
+/* TOP RIGHT NAVIGATION                                         */
+/* ------------------------------------------------------------ */
+#home .top-nav {
+  position: fixed;
+  top: 26px;
+  right: 78px;
+  display: flex;
+  align-items: center;
+  gap: 26px; /* slightly smaller gap to tighten layout */
+  z-index: 10000;
+}
+
+#home .top-nav button {
+  display: flex; /* align icon + text */
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #fff;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 3px solid #069494;
+  color: #000;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* prevent wrapping when icons load */
+}
+
+#home .top-nav button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ---- ICON STYLING ---- */
+#home .top-nav button img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0; /* prevent icon from shrinking */
+  margin-top: -2px; /* optical alignment tweak */
+}
+
+/* ------------------------------------------------------------ */
+/* RESPONSIVENESS                                               */
+/* ------------------------------------------------------------ */
+@media (max-width: 1024px) {
+  #home {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home-right {
+    width: 100%;
+    height: 50%;
+  }
+
+  .home-portfolio-text {
+    font-size: 10rem;
+    top: 5%;
+    right: 5%;
+  }
+
+  .home-middle-image {
+    width: 200px;
+    left: 20px;
+  }
+
+  .home-name {
+    font-size: 2.5rem;
+  }
+}
+
+/* PAGE 2 / ABOUT SECTION */
+#page2 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #FF9500;
+  display: flex;
+  box-sizing: border-box;
+
+  /* Background image */
+  background-i: url('Images/bgl.jpg');
+  background-repeat: no-repeat;
+
+  /* Make sure image is visible and can move */
+  background-size: 30% auto;      /* enlarge visibility */
+  background-position: 80% center; /* move clearly rightward */
+
+  /* Keep image ultra-crisp */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+  backface-visibility: hidden;
+}
+
+.center-image {
+  position: absolute;
+  top: 60%;           /* Slightly above center (50% would be exact center) */
+  left: 70%;          /* Horizontally centered */
+  transform: translate(-50%, -50%); /* Perfect centering with upward offset */
+  width: 30%;         /* Adjust as needed */
+  height: 60%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* EDUCATION BOX */
+.education-box {
+  position: absolute;     /* change to relative if you want inside-flow */
+  top: 125px;             /* adjust freely */
+  right: 330px;            /* adjust freely */
+
+  background: transparent;
+  padding: 18px 28px;
+
+  width: fit-content;
+  display: inline-block;
+}
+
+/* Heading inside box */
+.education-box h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+.language-box {
+  position: absolute;     /* change to relative if you want inside-flow */
+  top: 420px;             /* adjust freely */
+  right: 35px;            /* adjust freely */
+
+  background: transparent;
+  padding: 30px 28px;
+
+  width: fit-content;
+  display: inline-block;
+  z-index: 999;
+}
+
+/* Heading inside box */
+.language-box h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 16px 0; 
+  color: #000;
+}
+
+.language-list {
+  padding-left: 20px;          /* bullet indentation */
+  margin: 0;
+}
+
+.language-list li {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  list-style-type: disc;       /* simple bullets */
+  margin-bottom: 6px;
+  font-family: 'Times new roman', sans-serif;
+}
+
+/* WINDOW FRAME — without any shadow or glow effects */
+#page2 .window-frame {
+  position: absolute;
+  top: 130px;
+  right: 0px;
+  width: 150px;
+  height: 230px;
+  background: linear-gradient(145deg, #fff 0%, #e6e6e6 100%);
+  border: 8px solid #000;
+  box-shadow: 0 0 0 8px #8A3324; /* keep only solid outer #8A3324 frame */
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 8;
+  transform: perspective(900px) rotateY(-4deg);
+}
+
+/* AMOLED VIDEO — slightly zoomed but contained within frame */
+#page2 .window-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.25) brightness(0.95) saturate(1.4);
+  transform: scale(1.50); /* slightly zoomed-in look */
+  transform-origin: left; /* keep zoom centered */
+  position: relative;
+  z-index: 1; /* stay below grills */
+}
+
+/* GRILLS OVERLAY */
+#page2 .window-grills {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10; /* ABOVE video */
+}
+
+/* Common grill style */
+#page2 .window-grills span {
+  position: absolute;
+  background-color: #000;
+  transform: translateZ(0); /* ensures crisp rendering */
+}
+
+/* --- Two evenly spaced thin horizontal grills --- */
+#page2 .window-grills .h1 {
+  top: calc(33.33% - 1.5px);
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+#page2 .window-grills .h2 {
+  top: calc(66.66% - 1.5px);
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+/* --- Two evenly spaced thin vertical grills --- */
+#page2 .window-grills .v1 {
+  left: calc(33.33% - 1.5px);
+  top: 0;
+  width: 3px;
+  height: 100%;
+}
+#page2 .window-grills .v2 {
+  left: calc(66.66% - 1.5px);
+  top: 0;
+  width: 3px;
+  height: 100%;
+}
+
+/* SEMICIRCLE ABOVE THE WINDOW */
+#page2 .window-arch {
+  position: absolute;
+  top: 54px;            /* adjust to sit just above window */
+  right: 0px;          /* align horizontally with window */
+  width: 173.2px;         /* same width as window-frame */
+  height: 89px;         /* half of width → perfect semicircle */
+  background-color: #8A3324;
+  border-top-left-radius: 230px;
+  border-top-right-radius: 230px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 7;           /* slightly behind window frame */
+}
+
+/* DECORATIVE IMAGE — BEHIND ALL OBJECTS */
+#page2 .decor-image {
+  position: absolute;
+  top: -1.5px;
+  right: -55.5px;
+  width: 275px;
+  height: 465px;
+  background-image: url('Images/bgw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* layering */
+  z-index: 1; /* lower than window (z-index 8+) */
+  opacity: 1;
+  
+  /* keep image crisp and realistic */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+}
+
+#page2 .decor-image-2 {
+  position: absolute;
+  top: -4px;
+  right: -20px;
+  width: 325px;
+  height: 510px;
+  background-image: url('Images/bgw1.png'); /* <-- replace with your image path */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* layering */
+  z-index: 90; /* same depth as first image */
+  opacity: 1;
+
+  /* keep image crisp and realistic */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+}
+
+#page2 .decor-image-3 {
+  position: absolute;
+  top: 11px;
+  right: 23px;
+  width: 125px;
+  height: 210px;
+  background-image: url('Images/bgwarc.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* layering */
+  z-index: 91;
+  opacity: 1;
+
+  /* crisp image rendering */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: high-quality;
+
+  /* zoom and horizontal stretch */
+  transform: scale(1.2) scaleX(1.3) scaleY(1.2);
+  transform-origin: center; /* keeps it anchored in place */
+}
+
+/* FULL-WIDTH OVERLAY */
+.about-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;              /* consistent padding all around */
+  box-sizing: border-box;
+  z-index: 9999;
+  background: transparent;
+}
+
+/* Heading with colors */
+.about-overlay h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 20px 0;         /* adds space below heading */
+  align-self: flex-start;     /* ensures left alignment */
+}
+
+.about-overlay h2 span {
+  color: #fff;
+  font-style: italic;
+}
+
+/* Paragraph */
+.about-paragraph {
+  font-family: 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 1.18rem;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+  color: #fff;
+  max-width: 45%;
+  margin: 0;                  /* reset margin */
+  text-align: justify;
+}
+
+.skills {
+  background-color: transparent;
+  padding: 20px;
+  display: grid;
+  font-family: 'Times new roman', sans-serif;
+  width: 500%;
+  max-width: 600px;
+  border-radius: 12px;
+
+  /* Center adjustment */
+  position: relative;
+  top: -10px;   
+  left: -16px;  
+}
+
+.skills h3 {
+  color: #000;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: 'Poppins', serif;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  width: 180%;
+  max-width: 800px;
+}
+
+.skill {
+  text-align: left;
+  color: white;
+}
+
+.skill h4 {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.skill p {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  
+  /* New border styling */
+  border: 3px solid #069494;
+  width: 60%;
+  padding: 4px 8px;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-left {
+    width: 100%;
+    height: 300px;
+  }
+
+  .about-overlay {
+    padding: 30px 20px;
+  }
+
+  .about-overlay h2 {
+    font-size: 42px;
+  }
+
+  .about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-overlay {
+    padding: 20px 15px;
+  }
+}
+
+#page3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #ff9500; /* Left half */
+  overflow: hidden;    /* Prevent pseudo-element spill */
+}
+
+/* Right-side half background */
+#page3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;          /* Right half */
+  height: 100%;
+  background: #069494;
+  z-index: 1;          /* Behind overlay content */
+}
+
+/* Overlay container */
+#page3 .about-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  z-index: 9999;       /* Above both backgrounds */
+  background: transparent;
+}
+
+/* Wrapper for headings */
+#page3 .heading-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main heading */
+#page3 h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+/* Main heading spans */
+#page3 h2 .my {
+  color: #000;
+  font-style: italic;
+}
+
+#page3 h2 .works {
+  color: #fff;
+  font-style: italic;
+}
+
+/* Subheading */
+#page3 h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+}
+
+/* Subheading span */
+#page3 h3 span {
+  color: #fff;
+  font-style: italic;
+}
+
+/* LEFT BOX CONTAINER */
+#page3 .left-box-container {
+  position: absolute;
+  left: 0.6%;
+  top: 49.5%;
+  transform: translateY(-50%);
+  width: 520px;
+  z-index: 9999;
+}
+
+/* MAIN CARD */
+#page3 .inner-box {
+  background: transparent;
+  border-radius: 14px;
+  padding: 24px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* CONTENT WRAPPER */
+#page3 .box1-content {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+/* HEADING */
+#page3 .box1-content h4 {
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  color: #000;
+  margin: 0;
+}
+
+/* TWO COLUMN GRID */
+#page3 .tech-list.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 26px;
+  width: 100%;
+}
+
+/* ITEM (ICON + LABEL) */
+#page3 .tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO */
+#page3 .tech-item img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* LABEL */
+#page3 .tech-item span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* SECOND CONTAINER (PLACED UNDER FIRST ONE) */
+#page3 .functions-container {
+  position: absolute;
+  left: 0.9%;
+  top: calc(50% + 280px);   /* pushes it below Tech Stack */
+  width: 520px;
+  z-index: 9999;
+}
+
+/* SAME STYLING AS FIRST BOX */
+#page3 .functions-container .inner-box {
+  background: transparent;
+  border-radius: 14px;
+  padding: 26px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* CONTENT WRAPPER */
+#page3 .box2-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* HEADING STYLE */
+#page3 .box2-content h4 {
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  color: #000;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* BULLET LIST */
+#page3 .function-list {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#page3 .function-list li {
+  font-family: 'Times new roman', sans-serif;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.0;
+}
+
+/* APP LOGO CONTAINER — Center Bottom Placement */
+#page3 .app-logo-container {
+  position: absolute;
+  left: 43%;
+  bottom: -3.8%;         /* Adjust this if you want it higher/lower */
+  transform: translateX(-50%);
+  width: 420px;
+  z-index: 9999;
+}
+
+/* BOX STYLE (same glass style as others) */
+#page3 .app-logo-container .inner-box {
+  background: transparent;
+  border-radius: 0px;
+  padding: 26px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* CONTENT WRAPPER */
+#page3 .app-logo-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: left;
+}
+
+/* HEADING */
+#page3 .app-logo-content h4 {
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  color: #000;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* LOGO WRAPPER WITH BORDER */
+#page3 .app-logo-content .logo-wrapper {
+  padding: 5px;
+  border: 3px solid #069494;   /* Thick teal border */
+  border-radius: 0px;
+  display: inline-flex;
+}
+
+/* IMAGE ITSELF */
+#page3 .app-logo-content img {
+  width: 100px;
+  height: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+/* RIGHT-SIDE FIXED-TITLE BOX */
+#page3 #project2-title-box {
+  position: absolute;
+  top: 50px;
+  right: 205px;  
+  z-index: 9999;
+
+  /* Style */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  color: #000;
+
+  /* Box styling */
+  padding: 18px 28px;
+  border-radius: 14px;
+
+  width: fit-content;
+  max-width: 480px;
+}
+
+/* RIGHT SIDE CONTAINER — smaller overall */
+#page3 #right-paper-container {
+  position: absolute;
+  right: -10px;
+  top: 160px;
+  width: 550px;         /* reduced from 450px */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;            /* reduced gap */
+  z-index: 999999;
+}
+
+/* CARD — smaller & compact */
+#page3 #right-paper-container .paper-card {
+  background: transparent;
+  border-radius: 16px;
+  padding: 20px 20px;   /* reduced */
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+  gap: 25px;            /* reduced spacing */
+}
+
+/* LOGO AREA — smaller */
+#page3 #right-paper-container .paper-logo {
+  width: 130px;      /* reduced from 160px */
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo image */
+#page3 #right-paper-container .paper-logo img {
+  max-width: 120%;
+  max-height: 120%;
+  object-fit: contain;
+
+  border: 4px solid #069494;   /* reduced border */
+  border-radius: 14px;
+  padding: 6px;
+  background: transparent;
+}
+
+/* TEXT — scaled down */
+#page3 #right-paper-container .paper-text h5 {
+  font-family: 'Anton', sans-serif;
+  font-size: 1.2rem;    /* reduced */
+  color: #000;
+  margin: 0;
+}
+
+#page3 #right-paper-container .paper-text h6 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;   /* reduced */
+  color: #000;
+  margin: 4px 0 6px;
+}
+
+#page3 #right-paper-container .publisher {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;    /* reduced */
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* FIXED WRAPPER — WILL ALWAYS SHOW */
+#page3 #mini-container-wrapper {
+  position: absolute;
+  bottom: 5px;        /* PLACE HERE FOR NOW — fully visible */
+  right: 30px;
+
+  display: flex;
+  gap: 18px;
+
+  z-index: 9999;   /* highest possible */
+  
+  /* TEMPORARY background to ensure visibility */
+  background: transparent;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+/* MINI CARD */
+#page3 #mini-container-wrapper .mini-card {
+  width: 120px;
+  height: 110px;
+  background: transparent;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  z-index: 9999;
+}
+
+/* LOGO */
+#page3 #mini-container-wrapper .mini-card img {
+  width: 95px;
+  height: 95px;
+  object-fit: contain;
+}
+
+/* TEXT */
+#page3 #mini-container-wrapper .mini-card h6 {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0;
+  color: #000;
+}
+
+/* ZIG-ZAG PLACEMENT */
+#page3 #mini-container-wrapper .mini-card:nth-child(1) {
+  transform: translateY(0px);
+}
+
+#page3 #mini-container-wrapper .mini-card:nth-child(2) {
+  transform: translateY(-25px);
+}
+
+#page3 #mini-container-wrapper .mini-card:nth-child(3) {
+  transform: translateY(15px);
+}
+
+#page3 #mini-container-wrapper .mini-card:nth-child(4) {
+  transform: translateY(-20px);
+}
+
+#page3 #mini-container-wrapper .mini-card:nth-child(5) {
+  transform: translateY(10px);
+}
+
+#page3 #mini-container-wrapper a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#page3 #mini-container-wrapper a .mini-card {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* BOTTOM CENTER TITLE */
+#page3 #paper-links-title {
+  position: absolute;
+  bottom: 152px;           /* adjust this value as needed */
+  left: 60%;
+  transform: translateX(-50%);
+
+  font-family: 'Anton', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #000;
+  letter-spacing: 1px;
+
+  z-index: 9999;
+}
+
+#contact {
+  height: 100vh;
+  background-color: #069494; 
+  z-index: 1;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  position: relative;   /* IMPORTANT: makes overlay positioning work */
+  z-index: 0;
+}
+
+/* LEFT TOP BLOCK (unchanged) */
+#contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 30%;
+  background-color: #ff9500;
+  z-index: -1;
+}
+
+/* CONTACT ME heading (top-left) */
+#contact #contact-heading {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 56px;
+  font-weight: 500;
+}
+
+/* CONTACT (white italic) */
+#contact #contact-heading .contact {
+  color: #000;
+  font-style: bold;
+}
+
+/* ME (black italic) */
+#contact #contact-heading .me {
+  color: #fff;
+  font-style: italic;
+}
+
+/* RIGHT-CENTER CONTACT INFO BOX */
+#contact #contact-info-box {
+  position: absolute;
+  right: 450px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  z-index: 5;
+}
+
+/* Each row item */
+#contact #contact-info-box .info-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Icon styling */
+#contact #contact-info-box .info-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Text styling */
+#contact #contact-info-box .info-item p {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.right-photo-box {
+  position: absolute;       
+  right: 0;                 /* stick to right side */
+  top: 50%;                 
+  transform: translateY(-50%);
+
+  width: 30%;               /* right half of screen */
+  padding: 40px;            /* adjust padding as needed */
+
+  display: flex;
+  justify-content: center;   /* center image horizontally */
+  align-items: center;       /* center vertically */
+
+  box-sizing: border-box;
+  z-index: 998;             /* make sure it's visible */
+}
+
+.right-photo-box img {
+  width: 100%;              /* fills the right half */
+  max-width: 430px;         /* keep it properly sized */
+  height: auto;
+  object-fit: contain;      /* perfect scaling */
+  border-radius: 12px;      /* optional */
+}
+
+/* Optional: smooth scrolling (already defined) */
+html {
+  scroll-behavior: smooth;
+}
+
